@@ -9,6 +9,8 @@ import { AddEditProductComponent } from './components/add-edit-product/add-edit-
 const routes: Routes = [
   {path: '', component: ListProductsComponent},
   {path: 'add', component: AddEditProductComponent},
+  {path: 'edit/:id', component: AddEditProductComponent}, 
+  // {path: 'delete/:id', component: },// ruta para editar un producto
   {path: '**', redirectTo: '', pathMatch: 'full'} // redirecciona a la lista de productos si la ruta no existe
 ];
 
@@ -16,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { } 
