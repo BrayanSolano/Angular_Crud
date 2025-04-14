@@ -29,11 +29,17 @@ export class AddEditProductComponent implements OnInit {
 
   addProduct(){
 
+    // console.log(this.form);
 
 
+    const product: Product = {
+      name: this.form.value.name,
+      description: this.form.value.description,
+      price: this.form.value.price,
+      stock: this.form.value.stock,
 
-    // const product: Product = {
+    }
 
-    // }
+    console.log(product);
   }
 }
