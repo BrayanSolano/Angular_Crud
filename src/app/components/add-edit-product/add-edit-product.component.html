@@ -3,7 +3,7 @@
         <div class="card border-secondary mb-3" style="max-width: 25rem;">
             <div class="card-header text-center">Agregar Producto</div>
             <div class="card-body">
-                <form [formGroup]="form">
+                <form [formGroup]="form" (ngSubmit)="addProduct()">
                     <input formControlName="name" type="text" class="form-control" placeholder="Ingrese Nombre">
                     <input formControlName="description" type="text" class="form-control mt-2" placeholder="Ingrese Descripcion">
                     <input formControlName="price" type="text" class="form-control mt-2" placeholder="Ingrese Precio">
@@ -13,7 +13,7 @@
                             <button routerLink="/" type="button" class="btn btn-secondary">Volver</button>
                         </div>
                         <div class="col-lg-6">
-                            <button type="button" class="btn btn-primary">Aceptar</button>
+                            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Aceptar</button>
                         </div> 
                     </div>
                     

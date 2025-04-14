@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -22,7 +23,17 @@ export class AddEditProductComponent implements OnInit {
 
 
   ngOnInit(): void {
-    // Initialization logic here
+    // Initialization logic here}
+  
   }
 
+  addProduct(){
+
+
+
+
+    // const product: Product = {
+
+    // }
+  }
 }
